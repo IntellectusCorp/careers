@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 인텔렉투스
+# Intellectus
 
 ## Unlocking the potential of data
 
