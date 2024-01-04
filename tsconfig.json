@@ -1,7 +1,32 @@
 {
   // This file is not used in compilation. It is here just for a nice editor experience.
-  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  // "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "."
-  }
+    /* Emit */
+    "target": "ES2020",
+    "lib": ["ESNext"],
+    "declaration": true,
+    // These two options will be selectively overridden in each project.
+    // Utility libraries will have source maps on, but plugins will not.
+    "declarationMap": false,
+    "sourceMap": false,
+    "jsx": "react-native",
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    // Will be overridden in client projects
+    "module": "NodeNext",
+    // Avoid accidentally using this config to build
+    "noEmit": true,
+
+    /* Module Resolution */
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "skipLibCheck": true // @types/webpack and webpack/types.d.ts are not the same thing
+  },
+  "include": ["./**/*", "./**/.eslintrc.js"]
 }
